@@ -93,15 +93,15 @@ var playerTwo = document.getElementById('scoreboardTwo');
 
 
 // end game and compare score of player1 player 2;
-if (turn == false && ([i] = images.length-1)){
-if (playerTwoScore > playerOneScore){
-  alert("Player Two Wins!");
-} else if(playerOneScore > playerTwoScore){
-  alert("Player One Wins!");
-}
-  else if(playerOneScore == playerTwoScore){
-  alert("There is a tie!")
-}
-}
+// if (turn == false && ([i] = images.length-1)){
+// if (playerTwoScore > playerOneScore){
+//   alert("Player Two Wins!");
+// } else if(playerOneScore > playerTwoScore){
+//   alert("Player One Wins!");
+// }
+//   else if(playerOneScore == playerTwoScore){
+//   alert("There is a tie!")
+// }
+// }
 
 });
