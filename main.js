@@ -9,28 +9,41 @@ document.addEventListener('DOMContentLoaded', function () {
                 'img/new_york_minute.png','img/party_animal.png',
                 'img/puppy_love.png', 'img/queen_bee.png',
                 'img/rockstar.png', 'img/selfie.png', 'img/smoking_hot.png',
-                'img/snow_bunny.png'],
+                'img/snow_bunny.png'];
 
-      answers = ["be happy", "banana split", "bomb shell", "drama queen", "drunk in love",
+  var answers = ["be happy", "banana split", "bomb shell", "drama queen", "drunk in love",
                   "eye candy", "eye of the tiger" , "fly fishing" , "happy hour", "holy crap",
                   "monkey business", "new york minute", "party animal", "puppy love", "queen bee","rockstar",
-                  "selfie", "smoking hot", "snow bunny"],
-      i=0;
-      a=0;
-
-      turn= true;
-      playerOneScore = 0;
-      playerTwoScore = 0;
+                  "selfie", "smoking hot", "snow bunny"];
+      var i=0;
+      var a=0;
 
 
+      turn= true; //player1
+      var playerOneScore = 0;
+      var playerTwoScore = 0;
+
+
+
+
+//startGame
+var startGame = function init() {
+    turn= true;
+    }
 
 // change image on click
 // ternary shorthand of if/else statement used. Below describes what happens when a user has clicked over the number of images.
 //It will bring the user back to the first image.
 
+
 document.getElementById('changeImage').addEventListener('click', function changeImage() {
-                this.src = images[i >= images.length - 1 ? i = 0: ++i];
-                this.src = images[a >= answers.length - 1 ? a = 0 : ++a]
+                this.src = images[i >= images.length - 1 ? i=0: ++i];
+                this.src = images[a >= answers.length - 1 ? a=0: ++a];
+                if (i == images.length-1) {
+                   document.getElementById('changeImage').src ="img/Game-Over.jpg";
+                   turn = false;
+                   console.log("werk");
+                 }
             },false);
 
 
@@ -38,8 +51,8 @@ document.getElementById('changeImage').addEventListener('click', function change
 //check if there is a match
 document.getElementById('userInput').addEventListener('keydown', function checkAnswer() {
     if (event.key === "Enter") {
-      //console.log("I see enter");
     if (userInput.value == answers[a]) {
+      getScore();
       alert("There is a match!");
   } else {
       alert("That's incorrect.");
@@ -47,32 +60,25 @@ document.getElementById('userInput').addEventListener('keydown', function checkA
   }
 });
 
-//startGame
-var startGame = function() {
-    turn= true;
-}
-
-//Switch
-
-var switchTurn = document.getElementById('changeImage').addEventListener('click', function switchTurn() {
-           if (images[i] = images.length-1) {
-             turn = false;
-           }
-         });
-
 
 //scoring
-var score = document.getElementById('player1Score');
-    if (userInput.value == answers[a]){
-      if (turn= true) {
-        playerOneScore+=1;
-      } else if(turn = false){
-        playerTwoScore+=1;
-      }
-        }
-    scoreboardOne.innerHTML = playerOneScore;
-    scoreboardTwo.innerHTML = playerTwoScore;
 
+function getScore() {
+var playerOne = document.getElementById('scoreboardOne');
+var playerTwo = document.getElementById('scoreboardTwo');
+  if (turn == true){
+    if (userInput.value == answers[a]){
+        playerOneScore += 1;
+        playerOne.innerHTML = playerOneScore;
+      }
+    }
+    if (turn == false){
+      if (userInput.value == answers[a]){
+          playerTwoScore += 1;
+          playerTwo.innerHTML = playerTwoScore;
+}
+}
+}
 
 //clears the input field
   var entry = document.getElementById("userInput"),
@@ -84,9 +90,12 @@ var score = document.getElementById('player1Score');
 
 
 
-// compare(player1, player 2);
+// end game and compare score of player1 player 2;
+init(false);
 
-
+if (playerTwoScore > playerOneScore){
+  alert("Player Two Wins!");
+} else if (playerOneScore > playerTwo)
 
 
 });

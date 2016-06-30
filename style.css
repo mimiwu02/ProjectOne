@@ -70,7 +70,7 @@ footer {
 
 #userInput {
   font-size: 20px;
-  margin-left: 115px;
+  margin-left: 150px;
   margin-top: 50px;
 }
 
@@ -81,7 +81,7 @@ h3 {
 
 #clear {
   margin: 20px;
-  margin-left: 220px;
+  margin-left: 250px;
   padding: 5px;
   font-size: 15px;
   border-radius: 10px;
@@ -100,8 +100,8 @@ h3 {
 }
 
 .wrapper {
-  height: 500px;
-  width: 500px;
+  height: 550px;
+  width: 550px;
   border: 4px dotted lightpink;
   padding: 40px;
 }
