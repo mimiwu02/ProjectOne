@@ -1,0 +1,38 @@
+/*Style for index.html*/
+#button {
+  background-color: lightpink;
+  color: black;
+  font-size: 30px;
+  border: 1px solid pink;
+  border-radius: 10px;
+  height: 50px;
+  width: 300px;
+  margin-bottom: 100px;
+}
+
+p {
+  font-family: 'Zeyada', cursive;
+  font-size: 24px;
+}
+
+#content {
+  justify-content: center;
+  width: 800px;
+  height: 800px;
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 50px;
+}
+
+#magikoopa {
+  margin: 20px;
+}
+
+/*Style for game.html*/
+#evil-robot {
+  height: 10px;
+  width: 10px;
+  margin-right: 500px;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
