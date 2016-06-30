@@ -42,10 +42,8 @@ document.getElementById('changeImage').addEventListener('click', function change
                 if (i == images.length-1) {
                    document.getElementById('changeImage').src ="img/Game-Over.jpg";
                    turn = false;
-                   console.log("werk");
                  }
             },false);
-
 
 
 //check if there is a match
@@ -80,7 +78,7 @@ var playerTwo = document.getElementById('scoreboardTwo');
 }
 }
 
-//clears the input field
+//clears the input field by clicking in field or clicking the clear button
   var entry = document.getElementById("userInput"),
       clear = document.getElementById("clear");
 
@@ -88,14 +86,22 @@ var playerTwo = document.getElementById('scoreboardTwo');
       entry.value = "";
   }, false);
 
+  userInput.addEventListener("click", function clearfield(){
+      entry.value = "";
+  }, false);
+
 
 
 // end game and compare score of player1 player 2;
-init(false);
-
+if (turn == false && ([i] = images.length-1)){
 if (playerTwoScore > playerOneScore){
   alert("Player Two Wins!");
-} else if (playerOneScore > playerTwo)
-
+} else if(playerOneScore > playerTwoScore){
+  alert("Player One Wins!");
+}
+  else if(playerOneScore == playerTwoScore){
+  alert("There is a tie!")
+}
+}
 
 });

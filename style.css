@@ -45,7 +45,9 @@ footer {
 }
 
 /*Styling for game.html */
-
+img {
+  margin-left: 20px;
+}
 #EmojiGame {
   font-size: 100px;
   text-align: center;
@@ -89,12 +91,12 @@ h3 {
 }
 
 
-#player1Score {
+#playerOneScore {
   font-size: 20px;
   color: blue;
 }
 
-#player2Score {
+#playerTwoScore {
   font-size: 20px;
   color: blue;
 }
