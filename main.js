@@ -18,17 +18,15 @@ document.addEventListener('DOMContentLoaded', function () {
       i=0;
       a=0;
 
-      // current: 0;
-      //
-      // playerOne = 0;
-      // playerTwo = 1;
-      // playerOneScore = 0;
-      // playerTwoScore = 0;
+      turn= true;
+      playerOneScore = 0;
+      playerTwoScore = 0;
 
 
-  // change image on click
-  // ternary shorthand of if/else statement used. Below describes what happens when a user has clicked over the number of images.
-  //It will bring the user back to the first image.
+
+// change image on click
+// ternary shorthand of if/else statement used. Below describes what happens when a user has clicked over the number of images.
+//It will bring the user back to the first image.
 
 document.getElementById('changeImage').addEventListener('click', function changeImage() {
                 this.src = images[i >= images.length - 1 ? i = 0: ++i];
@@ -49,21 +47,31 @@ document.getElementById('userInput').addEventListener('keydown', function checkA
   }
 });
 
-//switch turns
+//startGame
+var startGame = function() {
+    turn= true;
+}
 
-// var turn = document.getElementById('changeImage').addEventListener('click', function changeTurn() {
-//         if (i = images.length-1) {
-//
-//         }
+//Switch
 
+var switchTurn = document.getElementById('changeImage').addEventListener('click', function switchTurn() {
+           if (images[i] = images.length-1) {
+             turn = false;
+           }
+         });
 
 
 //scoring
-// var score = document.getElementById('player1Score');
-//     if (userInput.value == answers[a]){
-//     playerOneScore+=1;
-//     scoreboard.innerHTML = playerOneScore;
-//   }
+var score = document.getElementById('player1Score');
+    if (userInput.value == answers[a]){
+      if (turn= true) {
+        playerOneScore+=1;
+      } else if(turn = false){
+        playerTwoScore+=1;
+      }
+        }
+    scoreboardOne.innerHTML = playerOneScore;
+    scoreboardTwo.innerHTML = playerTwoScore;
 
 
 //clears the input field
