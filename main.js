@@ -18,10 +18,12 @@ document.addEventListener('DOMContentLoaded', function () {
       i=0;
       a=0;
 
-      // inProgress= false;
-
-      Player1_Score = 0;
-      Player2_Score = 0;
+      // current: 0;
+      //
+      // playerOne = 0;
+      // playerTwo = 1;
+      // playerOneScore = 0;
+      // playerTwoScore = 0;
 
 
   // change image on click
@@ -33,8 +35,6 @@ document.getElementById('changeImage').addEventListener('click', function change
                 this.src = images[a >= answers.length - 1 ? a = 0 : ++a]
             },false);
 
-//switch players
-
 
 
 //check if there is a match
@@ -43,11 +43,28 @@ document.getElementById('userInput').addEventListener('keydown', function checkA
       //console.log("I see enter");
     if (userInput.value == answers[a]) {
       alert("There is a match!");
-    } else {
+  } else {
       alert("That's incorrect.");
     }
   }
 });
+
+//switch turns
+
+// var turn = document.getElementById('changeImage').addEventListener('click', function changeTurn() {
+//         if (i = images.length-1) {
+//
+//         }
+
+
+
+//scoring
+// var score = document.getElementById('player1Score');
+//     if (userInput.value == answers[a]){
+//     playerOneScore+=1;
+//     scoreboard.innerHTML = playerOneScore;
+//   }
+
 
 //clears the input field
   var entry = document.getElementById("userInput"),
@@ -57,16 +74,11 @@ document.getElementById('userInput').addEventListener('keydown', function checkA
       entry.value = "";
   }, false);
 
-//scoring
+
 
 // compare(player1, player 2);
-// document.write("<p>Player 1's: Score " + Player1_Score);
-// document.write("<p>Player 2's Score: " + Player2_Score);
 
-//Ending player round
 
-// function endGame() {
-//   inProgress = false;
-//
-//   console.log('ending game');
+
+
 });

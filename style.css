@@ -33,7 +33,7 @@ footer {
 
 }
 
-h2 {
+#subheading {
   font-size: 40px;
   text-align: center;
   margin: 0;
@@ -59,7 +59,7 @@ h2 {
  #secondTitle {
  font-size: 50px;
  text-align: center;
- margin: 0;
+ margin-top: 20px;
  padding: 0;
  color: black;
  background-color: transparent;
@@ -87,4 +87,26 @@ h3 {
   font-size: 15px;
   border-radius: 10px;
   display: inline-block;
+}
+
+
+#player1Score {
+  font-size: 20px;
+  color: blue;
+}
+
+#player2Score {
+  font-size: 20px;
+  color: blue;
+}
+
+.wrapper {
+  height: 500px;
+  width: 500px;
+  border: 4px dotted lightpink;
+  padding: 40px;
+}
+
+h4 {
+  color: red;
 }
