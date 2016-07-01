@@ -36,3 +36,10 @@ p {
   justify-content: flex-start;
   align-content: flex-start;
 }
+
+#grid-container{
+  width: 500px;
+	margin:0px auto;
+	height: 500px;
+	border: 1px solid black;
+}

@@ -24,10 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
       var playerTwoScore = 0;
 
 
-
-
+    // startGame();
 //startGame
-var startGame = function init() {
+var startGame = function() {
     turn= true;
     }
 
@@ -43,6 +42,7 @@ document.getElementById('changeImage').addEventListener('click', function change
                    document.getElementById('changeImage').src ="img/Game-Over.jpg";
                    turn = false;
                  }
+
             },false);
 
 
